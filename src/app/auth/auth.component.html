@@ -1,5 +1,5 @@
-<div class="auth-page">
-  <div class="container page">
+<div class="">
+  <div class="container">
     <div class="row">
 
       <div class="col-md-6 offset-md-3 col-xs-12">
@@ -23,13 +23,21 @@
                 *ngIf="authType == 'register'"
                 />
             </fieldset>
-            <fieldset class="form-group">
-              <input
-                formControlName="email"
-                placeholder="Email"
-                class="form-control form-control-lg"
-                type="text" />
+
+            <fieldset class="form-group example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="authForm.hasError('email') && !authForm.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="authForm.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
             </fieldset>
+
+
             <fieldset class="form-group">
               <input
                 formControlName="password"

@@ -4,6 +4,7 @@ import { AuthComponent } from './auth.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared';
+import {NoAuthGuard} from './no-auth-guard.service';
 
 
 
@@ -18,6 +19,9 @@ import { SharedModule } from '../shared';
     FormsModule,
     ReactiveFormsModule,
     SharedModule
+  ],
+  providers: [
+    NoAuthGuard
   ]
 })
 export class AuthModule { }

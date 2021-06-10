@@ -13,6 +13,7 @@ import {
   HeaderComponent,
   SharedModule
 } from './shared';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
