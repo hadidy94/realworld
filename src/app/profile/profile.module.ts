@@ -4,6 +4,8 @@ import { ProfileComponent } from './profile.component';
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileResolver } from './profile-resolver.service';
 import { SharedModule } from '../shared';
+import { ProfileFavoritesComponent } from './profile-favorites.component';
+import { ProfileArticlesComponent }  from './profile-articles.component';
 
 
 
@@ -11,7 +13,9 @@ import { SharedModule } from '../shared';
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
+    ProfileFavoritesComponent,
+    ProfileArticlesComponent
   ],
   imports: [
     CommonModule,

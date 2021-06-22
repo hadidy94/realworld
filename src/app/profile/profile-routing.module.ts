@@ -3,13 +3,25 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { ProfileResolver } from './profile-resolver.service';
 import { ProfileComponent } from './profile.component';
+import { ProfileFavoritesComponent } from './profile-favorites.component';
+import { ProfileArticlesComponent }  from './profile-articles.component';
  const routes: Routes =[
    {
      path:':username',
      component: ProfileComponent,
      resolve: {
        profile: ProfileResolver
-     }
+     },
+     children:[
+       {
+         path:'',
+         component: ProfileArticlesComponent
+       },
+       {
+         path:'favorites',
+         component: ProfileFavoritesComponent
+       }
+     ]
    }
  ]
 

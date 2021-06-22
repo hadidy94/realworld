@@ -4,13 +4,17 @@ import { ShowAuthedDirective } from './show-authed.directive';
 import { ListErrorsComponent } from './list-errors/list-errors.component';
 import {  MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FavoriteButtonComponent } from './buttons/favorite-button.component';
+import { FollowButtonComponent } from './buttons/follow-button.component';
 
 
 
 @NgModule({
   declarations: [
     ShowAuthedDirective,
-    ListErrorsComponent
+    ListErrorsComponent,
+    FavoriteButtonComponent,
+    FollowButtonComponent
   ],
   imports: [
     CommonModule,
